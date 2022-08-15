@@ -1,5 +1,6 @@
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getArticle } from "../articles-service/articles-service"
+import { Article, getArticle } from "../articles-service/articles-service"
 
 export function ArticlePageWrapper()
 {
@@ -10,26 +11,35 @@ export function ArticlePageWrapper()
 
 export function ArticlePage({referenceId = "", summary = false})
 {
-    const article = getArticle(referenceId);
+    const [article, setArticle] = React.useState<Article>();
+    let imagePath = "";
+
+    useEffect(() => {
+        setArticle(getArticle(referenceId));
+    }, [referenceId])
+
+
     let paragraphs: any[] = []
 
-    for(let index = 0; index < article.body.length; index++) {
-        paragraphs.push(<p key={index}>{article.body[index]}</p>)
-
-        if (summary) {
-            break;
+    if (article) {
+        for(let index = 0; index < article.body.length; index++) {
+            paragraphs.push(<p key={index}>{article!.body[index]}</p>)
+    
+            if (summary) {
+                break;
+            }
         }
+    
+        imagePath = "/assets/" + article.coverPhoto;
     }
-
-    const imagePath = "./assets/" + article.coverPhoto;
-
+    
     return(
         <div className="">
             {   imagePath &&
                 <img src={imagePath} alt="turn off react warnings"></img>
             }
-            <h1>{article.title}</h1>
-            <h2>{article.subtitle}</h2>
+            <h1>{article && article.title}</h1>
+            <h2>{article && article.subtitle}</h2>
             { paragraphs }
         </div>);
 }

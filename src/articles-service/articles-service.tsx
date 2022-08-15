@@ -6,7 +6,12 @@ export interface Article {
     title: string,
     subtitle: string,
     episode: number,
-    body: string[]
+    body: any[]
+}
+
+export interface ImageParagraph {
+    fileName: string,
+    subtext: string,
 }
 
 export function getArticles(): Article[] {

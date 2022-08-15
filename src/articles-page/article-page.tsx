@@ -11,35 +11,36 @@ export function ArticlePageWrapper()
 
 export function ArticlePage({referenceId = "", summary = false})
 {
-    const [article, setArticle] = React.useState<Article>();
+    const article = getArticle(referenceId)
     let imagePath = "";
-
-    useEffect(() => {
-        setArticle(getArticle(referenceId));
-    }, [referenceId])
-
-
     let paragraphs: any[] = []
 
-    if (article) {
-        for(let index = 0; index < article.body.length; index++) {
-            paragraphs.push(<p key={index}>{article!.body[index]}</p>)
-    
-            if (summary) {
-                break;
-            }
+    for(let index = 0; index < article.body.length; index++) {
+        if (article.body[index].fileName) {
+            paragraphs.push(
+                <div>
+                    <img src={"/assets/" + article.body[index].fileName}></img>
+                    <p>{article.body[index].subtext}</p>
+                </div>
+            )
+        } else {
+            paragraphs.push(<p key={index}>{article.body[index]}</p>)
         }
-    
-        imagePath = "/assets/" + article.coverPhoto;
+
+        if (summary) {
+            break;
+        }
     }
+
+    imagePath = "/assets/" + article.coverPhoto;
     
     return(
         <div className="">
             {   imagePath &&
                 <img src={imagePath} alt="turn off react warnings"></img>
             }
-            <h1>{article && article.title}</h1>
-            <h2>{article && article.subtitle}</h2>
+            <h1>{article.title}</h1>
+            <h2>{article.subtitle}</h2>
             { paragraphs }
         </div>);
 }

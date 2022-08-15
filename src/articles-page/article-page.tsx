@@ -8,16 +8,26 @@ export function ArticlePageWrapper()
     return <ArticlePage referenceId={id} />;
 }
 
-export function ArticlePage({referenceId = ""})
+export function ArticlePage({referenceId = "", summary = false})
 {
     const article = getArticle(referenceId);
     let paragraphs: any[] = []
-    article.body.forEach((paragraph, idx) => {
-        paragraphs.push(<p key={idx}>{paragraph}</p>)
-    })
+
+    for(let index = 0; index < article.body.length; index++) {
+        paragraphs.push(<p key={index}>{article.body[index]}</p>)
+
+        if (summary) {
+            break;
+        }
+    }
+
+    const imagePath = "./assets/" + article.coverPhoto;
 
     return(
         <div className="">
+            {   imagePath &&
+                <img src={imagePath} alt="turn off react warnings"></img>
+            }
             <h1>{article.title}</h1>
             <h2>{article.subtitle}</h2>
             { paragraphs }

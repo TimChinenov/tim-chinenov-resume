@@ -4,7 +4,7 @@ import ArticlesPage from './articles-page/articles-page';
 import AboutPage from './about-page/about-page';
 import HomePage from './home-page/home-page';
 import Layout from './layout/layout';
-import { ArticlePageWrapper } from './article-page/article-page';
+import { ArticlePageWrapper } from './articles-page/article-page';
 
 function App() {
   return (

@@ -5,6 +5,7 @@ import AboutPage from './about-page/about-page';
 import HomePage from './home-page/home-page';
 import Layout from './layout/layout';
 import { ArticlePageWrapper } from './articles-page/article-page';
+import { CareerPage } from './career-page/career-page';
 
 function App() {
   return (
@@ -15,9 +16,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={ <Layout /> }>
-            <Route path="home" element={ <HomePage /> }></Route>
-            <Route path="articles" element={ <ArticlesPage />}></Route>
-            <Route path="about" element={ <AboutPage /> }></Route>
+            <Route index element={<HomePage />} />
+            <Route path="home" element={ <HomePage /> } />
+            <Route path="articles" element={ <ArticlesPage />} />
+            <Route path="about" element={ <AboutPage /> } />
+            <Route path="career" element={ <CareerPage />} />
             <Route path={`articles/:id`} element={ <ArticlePageWrapper />}></Route>
           </Route>
         </Routes>

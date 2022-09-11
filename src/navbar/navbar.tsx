@@ -19,7 +19,9 @@ export default function Navbar() {
                     </Link>
                 </div>
                 <div className="text-center pr-4 text-slate-900 hover:text-slate-500 ease-in-out duration-200">
-                    <p>Career</p>
+                    <Link to="/career">
+                        <p>Career</p>
+                    </Link>
                 </div>
             </section>
         </div>)

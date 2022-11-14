@@ -8,6 +8,8 @@ export function CareerPage() {
                 <h2>Summary</h2>
                 <hr className="mt-1 pb-1"></hr>
                 <p>I am a Fullstack Engineer who builds distributed microservice web applications for automating various services. Historically I have built such services to solve supply chain, manufacturing, and B2B Consumer problems.</p>
+                <br></br>
+                <p>I prefer to work for mission driven organizations. My passion spaces are climate change mitigation and green tech.</p>
             </section>
 
             <section className="pb-4">

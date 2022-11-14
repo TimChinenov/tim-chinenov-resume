@@ -4,7 +4,7 @@ export default function Navbar() {
     return (
         <div className="pt-4 pb-8" >
             <section className="pb-4">
-                <h1><strong>Technically Writing</strong></h1>
+                <h1><strong>Globally Local</strong></h1>
                 <h3>The Blog of Tim Chinenov</h3>
             </section>
             <section className="flex flex-row">

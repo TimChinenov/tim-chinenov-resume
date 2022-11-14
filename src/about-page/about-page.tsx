@@ -10,7 +10,7 @@ export default function AboutPage() {
             </p>
             <p className="pb-4">
                 The common thread between my adventures, however, is my love of technology and engineering.
-                Technically Writing is a means to document this journey as well as express the ideas they have shaped.
+                Globally Local is a means to document this journey as well as express the ideas they have shaped.
             </p>
 
             <div></div>

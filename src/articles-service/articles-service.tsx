@@ -6,7 +6,7 @@ export interface Article {
     title: string,
     subtitle: string,
     episode: number,
-    body: any[]
+    link: string
 }
 
 export interface ImageParagraph {

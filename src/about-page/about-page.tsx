@@ -16,6 +16,7 @@ export default function AboutPage() {
 
             <p>I enjoy digital journalling. If you enjoy my writing here, consider some of my other focused accounts:</p>
             <ol>
+                <li><a href="">LinkedIn</a></li>
                 <li>Personal Instagram</li>
                 <li>Skate Instagram</li>
                 <li>Writing Instagram</li>

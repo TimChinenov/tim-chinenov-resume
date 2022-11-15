@@ -23,7 +23,7 @@ export default function ArticlesPage() {
                 ))} 
             </div>
             <h2 className="pb-2">Older Posts</h2>
-            <div className="w-full h-48 grid grid-cols-2 gap-4 pb-8">
+            <div className="w-full h-52 grid sm:grid-cols-2 gap-4 pb-8">
                 { articles.map((art: Article, index) => (
                     index != 0 && <div key={ art.referenceId }>
                         <a href={art.link} target="_blank">

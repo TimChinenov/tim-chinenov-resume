@@ -65,7 +65,6 @@ export function CareerPage() {
                     { indentBlock() }
                     <div>
                         <p>Developed front-end features for Quant tools.</p>
-                        <p>Left early because the technology was dissapointingly archaic.</p>
                     </div>
                 </div>
             </section>

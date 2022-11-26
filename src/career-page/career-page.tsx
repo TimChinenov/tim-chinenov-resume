@@ -65,7 +65,7 @@ export function CareerPage() {
                     { indentBlock() }
                     <div>
                         <p>Developed front-end features for Quant tools.</p>
-                        
+                        <p>Developed APIs for Goldman's graph database.</p>
                     </div>
                 </div>
             </section>

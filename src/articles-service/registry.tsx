@@ -1,6 +1,22 @@
 import { Article } from "./articles-service";
 
 export const articles: Map<string, Article> = new Map([
+    ["10", {
+        referenceId: "10",
+        coverPhoto: "ai_art_theft_mitigation/coverPhoto.png",
+        title: "How to Mitigate AI Art Theft",
+        subtitle: "Instead of abolishment, let's consider new solutions for new technologies",
+        episode: 10,
+        link: "https://medium.com/@theclassytim/how-to-mitigate-ai-art-theft-38049f0a135b"
+    }],
+    ["9", {
+        referenceId: "9",
+        coverPhoto: "ai_coding_interview/coverPhoto.png",
+        title: "Giving ChatGPT a Coding Interview",
+        subtitle: "Can this AI solve every software engineer's worst nightmare?",
+        episode: 9,
+        link: "https://medium.com/@theclassytim/giving-chatgpt-a-coding-interview-fa0f7d95c2cb"
+    }],
     ["1", {
         referenceId: "1",
         coverPhoto: "rivian_v_cybertruck/rivianvcyber.png",

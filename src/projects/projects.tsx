@@ -3,6 +3,10 @@ export default function ProjectsPage()
     return(
         <div>
             <div>
+                <p>* The following are projects I have built for fun in my free time. They are not a representation of my professional abilities.</p>
+            </div>
+
+            <div className="pt-8">
                 <h2><a href="https://thymezones.com" target="_blank"><u>Thymezones</u> 🔗</a></h2>
                 <p>I frequently have to schedule meetings across multiple timezones. Many existing websites either have poor or overcomplicated user interfaces. So I made a timezone converter in my own image!</p>
             </div>

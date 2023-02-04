@@ -8,7 +8,7 @@ export default function ProjectsPage()
             </div>
 
             <div className="pt-8">
-                <h2><a href="https://evervice.com"><u>Evervice.com</u> 🔗</a></h2>
+                <h2><a href="https://evervice.com" target="_blank"><u>Evervice.com</u> 🔗</a></h2>
                 <p>I briefly helped a consulting group develop their company's landing page. An article describing the implementation of the animation can be found <a href="https://medium.com/swlh/building-state-based-swipe-in-animations-in-react-e6e0707e3671"><u>here</u></a>.</p>
             </div>
         </div>
